@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
-import SEO from '../seo/seo'
+import SEO from '../components/seo/seo'
 
 
 export default function Home() {
