@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../layout/layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import SEO from '../seo/seo'
+import { Link, graphql } from "gatsby"
 
 
 class Article extends React.Component {
@@ -27,11 +28,14 @@ class Article extends React.Component {
           meta={keywords}
         >
         </SEO>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-        <i>{publicationDate}</i>
-        <hr></hr>
-        <section>{documentToReactComponents(parsed)}</section>
+        <article>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <i>{publicationDate}</i>
+          <hr></hr>
+          <section>{documentToReactComponents(parsed)}</section>
+        </article>
+        <Link to="/">Back to Home Page</Link>
       </Layout >
     )
   }

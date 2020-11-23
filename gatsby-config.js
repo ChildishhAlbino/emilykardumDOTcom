@@ -14,7 +14,8 @@ module.exports = {
         spaceId: `w8ij9u2tems4`,
         accessToken: process.env.CONTENTFUL_API_TOKEN,
       }
-    }
+    },
+    `gatsby-plugin-sass`
   ],
   siteMetadata: {
     title: `Emily Kardum`,
