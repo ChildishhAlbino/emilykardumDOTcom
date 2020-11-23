@@ -7,6 +7,15 @@
 require("dotenv").config()
 
 module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `w8ij9u2tems4`,
+        accessToken: process.env.CONTENTFUL_API_TOKEN,
+      }
+    }
+  ],
   siteMetadata: {
     title: `Emily Kardum`,
     author: `Emily Kardum`,
@@ -14,18 +23,6 @@ module.exports = {
     siteUrl: `https://www.emilykardum.com`,
     social: {
       twitter: `friedeggily`,
-    },
-
-    /* Your site config here */
-    plugins: [
-
-      {
-        resolve: `gatsby-source-contentful`,
-        options: {
-          spaceId: `w8ij9u2tems4`,
-          accessToken: process.env.CONTENTFUL_API_TOKEN,
-        }
-      }
-    ],
+    }
   }
 }
