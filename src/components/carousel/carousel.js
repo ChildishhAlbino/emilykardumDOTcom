@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, graphql } from "gatsby"
-import CarouselCard from "./CarouselCard";
-import Carousel from "react-elastic-carousel"
 import './carousel.scss'
 class CustomCarousel extends React.Component {
     state = { articles: [], ordered: [] };
