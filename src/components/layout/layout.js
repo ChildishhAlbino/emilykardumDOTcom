@@ -13,7 +13,9 @@ const Layout = ({ children }) => {
                 {children}
             </main>
             <footer>
-
+                <section>
+                    <h1>FOOTER/NAV HERE</h1>
+                </section>
             </footer>
         </div>
     )

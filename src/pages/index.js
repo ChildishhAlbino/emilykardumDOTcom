@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from '../components/seo/seo'
 import { Link, graphql } from "gatsby"
-
+import Carousel from "../components/carousel/carousel"
 class IndexPage extends React.Component {
 
   render() {
@@ -22,19 +22,9 @@ class IndexPage extends React.Component {
             </p>
           </section>
           <h1>Gaming, Technology, and Entertainment</h1>
-          <section>
-            <div>
-              <Link to={gamingArticles[0].slug}><h2>{gamingArticles[0].title}</h2></Link>
-              <h3>{gamingArticles[0].subtitle}</h3>
-            </div>
-          </section>
+          <Carousel articles={gamingArticles} />
           <h1>Politics & Current Affairs</h1>
-          <section>
-            <div>
-              <Link to={politicsArticles[0].slug}><h2>{politicsArticles[0].title}</h2></Link>
-              <h3>{politicsArticles[0].subtitle}</h3>
-            </div>
-          </section>
+          <Carousel articles={politicsArticles} />
         </main>
       </Layout >
     )
@@ -49,6 +39,7 @@ export const pageQuery = graphql`
     politics: allContentfulArticle(filter: {category: {eq: "politics/current-affairs"}}) {
     edges {
       node {
+        id
         slug
         category
         publicationDate
@@ -60,6 +51,7 @@ export const pageQuery = graphql`
   gaming: allContentfulArticle(filter: {category: {eq: "gaming/technology/entertainment"}}) {
     edges {
       node {
+        id
         slug
         category
         publicationDate

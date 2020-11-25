@@ -1,0 +1,48 @@
+// .rec-carousel-item {
+//   width: 100%;
+//   background-color: black;
+// }
+
+.carousel-section {
+  border-radius: 1em;
+  text-align: center;
+  padding: 1em;
+  background-color: gray;
+}
+
+@media (min-width: 1px) {
+  .carousel-section:first-of-type {
+    width: 100%;
+  }
+  .carousel-section:not(:first-of-type) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-section:nth-of-type(-n + 2) {
+    width: 45%;
+    display: inline;
+  }
+
+  .carousel-section:not(:nth-of-type(-n + 2)) {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .carousel-section:nth-of-type(-n + 3) {
+    width: 33%;
+    display: inline;
+  }
+
+  .carousel-section:not(:nth-of-type(-n + 3)) {
+    display: none;
+  }
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
