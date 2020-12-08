@@ -1,16 +1,18 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from '../components/seo/seo'
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Carousel from "../components/carousel/carousel"
 class IndexPage extends React.Component {
-
+  state = { ...this.props }
   render() {
     const { data } = this.props
     let { politics, gaming } = data;
 
     let gamingArticles = gaming.edges.map((node) => { return { ...node.node } })
     let politicsArticles = politics.edges.map((node) => { return { ...node.node } })
+
+    console.log(this.state)
     return (
       <Layout>
         <SEO title="Home"></SEO>
@@ -21,10 +23,16 @@ class IndexPage extends React.Component {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto saepe corrupti fuga! Quae ducimus dolore voluptate soluta expedita sequi fugit? Delectus aperiam libero magni perferendis cumque consectetur dicta facilis magnam incidunt, architecto earum neque aut nam eum quisquam debitis laboriosam ab rerum laudantium ut! Repellendus maiores quibusdam nobis sed doloremque!
             </p>
           </section>
-          <h1>Gaming, Technology, and Entertainment</h1>
-          <Carousel articles={gamingArticles} />
-          <h1>Politics & Current Affairs</h1>
-          <Carousel articles={politicsArticles} />
+          <Carousel
+            items={gamingArticles}
+            renderNavBar={true}
+            title={"Gaming, Technology, and Entertainment"}
+          />
+          <Carousel
+            items={politicsArticles}
+            renderNavBar={true}
+            title={"Politics & Current Affairs"}
+          />
         </main>
       </Layout >
     )
