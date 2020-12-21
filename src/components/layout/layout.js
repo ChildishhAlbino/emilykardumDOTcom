@@ -1,17 +1,17 @@
 import React from 'react'
 import './layout.scss'
+import NavBar from '../navbar/navbar'
+
 
 const Layout = ({ children }) => {
     return (
         <div className="layout-container">
             <header>
-                <section>
-                    <h1>LOGO/NAV HERE</h1>
-                </section>
+                <NavBar></NavBar>
             </header>
-            <main>
+            <div className="layout-content">
                 {children}
-            </main>
+            </div>
             <footer>
                 <section>
                     <h1>FOOTER/NAV HERE</h1>

@@ -1,16 +1,21 @@
 import React from 'react';
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Carousel from 'react-elastic-carousel'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './carousel.scss'
 class CustomCarousel extends React.Component {
     state = { ...this.props };
 
+
+    componentDidMount() {
+        this.setState({ ...this.props });
+    }
+
     renderNavBar = () => {
         let { carousel, title } = this.state
         return (
             <div className="carousel-nav-bar-wrapper">
-                {title && <h1>{title}</h1>}
+                { title && <h1>{title}</h1>}
                 { carousel !== undefined && (
                     <div className="carousel-nav-bar">
                         <div onClick={() => { carousel.slidePrev() }}>
@@ -26,7 +31,7 @@ class CustomCarousel extends React.Component {
     }
 
     render() {
-        let { items, carousel, breakPoints, renderNavBar } = this.state
+        let { items, breakPoints, renderNavBar } = this.state
         console.log(this.state)
         return (
             <div className="carousel-container">
@@ -54,12 +59,12 @@ class CustomCarousel extends React.Component {
         )
     }
 }
-
+// there is a 36px subtraction between page width and item width
 CustomCarousel.defaultProps = {
     breakPoints: [
         { width: 1, itemsToShow: 1 },
-        { width: 800, itemsToShow: 2 },
-        { width: 1200, itemsToShow: 3 }
+        { width: 716, itemsToShow: 2 },
+        { width: 927, itemsToShow: 3 }
     ],
     items: [],
     selectedIndex: 0,
