@@ -28,13 +28,15 @@ class Article extends React.Component {
           meta={keywords}
         >
         </SEO>
-        <article>
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
-          <i>{publicationDate}</i>
-          <hr></hr>
-          <section>{documentToReactComponents(parsed)}</section>
-        </article>
+        <main>
+          <article>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+            <i>{publicationDate}</i>
+            <hr></hr>
+            <section>{documentToReactComponents(parsed)}</section>
+          </article>
+        </main>
         <Link to="/">Back to Home Page</Link>
       </Layout >
     )

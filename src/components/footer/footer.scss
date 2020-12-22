@@ -1,0 +1,43 @@
+.footer-nav-container {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-size: 0.5em;
+  a {
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 2em;
+  }
+  .logo::after {
+    content: "This is trademark text™.";
+  }
+  .navbar-item {
+    width: 50%;
+    background-color: black;
+    padding: 0.1em;
+    border-radius: 0.25em;
+  }
+  grid-gap: 1em;
+}
+
+@media (min-width: 1024px) {
+  .footer-nav-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-gap: 0em 1em;
+    .navbar-item {
+      min-width: 150px;
+    }
+  }
+}

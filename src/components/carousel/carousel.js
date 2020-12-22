@@ -64,7 +64,7 @@ CustomCarousel.defaultProps = {
     breakPoints: [
         { width: 1, itemsToShow: 1 },
         { width: 716, itemsToShow: 2 },
-        { width: 927, itemsToShow: 3 }
+        { width: 972, itemsToShow: 3 }
     ],
     items: [],
     selectedIndex: 0,

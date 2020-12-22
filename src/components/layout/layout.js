@@ -1,7 +1,7 @@
 import React from 'react'
 import './layout.scss'
 import NavBar from '../navbar/navbar'
-
+import Footer from '../footer/footer'
 
 const Layout = ({ children }) => {
     return (
@@ -13,9 +13,7 @@ const Layout = ({ children }) => {
                 {children}
             </div>
             <footer>
-                <section>
-                    <h1>FOOTER/NAV HERE</h1>
-                </section>
+                <Footer></Footer>
             </footer>
         </div>
     )

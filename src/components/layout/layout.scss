@@ -20,6 +20,10 @@ header {
   background-color: #1b1b1b;
 }
 
+footer {
+  padding: 1em;
+  background-color: #1b1b1b;
+}
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   height: 100%;
@@ -30,6 +34,8 @@ body {
 
 main {
   padding: 1em;
+  min-height: 88vh;
+  background-color: #ffffff;
 }
 
 html {
