@@ -8,7 +8,7 @@ import { Link, graphql } from "gatsby"
 
 class Article extends React.Component {
   render() {
-    let { site, contentfulArticle } = this.props.data
+    let { contentfulArticle } = this.props.data
     let { title, subtitle, publicationDate, body, seo: { tags } } = contentfulArticle
     let { raw } = body
     let parsed = JSON.parse(raw)
@@ -32,7 +32,7 @@ class Article extends React.Component {
           <article>
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
-            <i>{publicationDate}</i>
+            <i>{Date(publicationDate)}</i>
             <hr></hr>
             <section>{documentToReactComponents(parsed)}</section>
           </article>

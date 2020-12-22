@@ -1,9 +1,9 @@
 .carousel-section {
-  border-radius: 1em;
   text-align: center;
-  padding: 1em;
   background-color: gray;
   width: 95%;
+  height: 300px;
+  border: 1px solid black;
 }
 
 .carousel-nav-bar {
@@ -31,4 +31,8 @@
 
 .rec-slider {
   width: 100%;
+}
+
+.carousel-container {
+  min-height: 300px;
 }

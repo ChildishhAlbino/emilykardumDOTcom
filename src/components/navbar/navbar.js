@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DesktopNavBar from './desktop-nav-bar';
 import MobileNavBar from './mobile-nav-bar';
-import { Link } from 'gatsby'
 import './navbar.scss'
 
 const NavBar = () => {
-    let [collapsed, setCollapsed] = useState(true)
 
     let navBarItems = [
         {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from "gatsby"
 import Carousel from 'react-elastic-carousel'
+import ArticleCard from '../article-card/article-card';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './carousel.scss'
 class CustomCarousel extends React.Component {
@@ -49,10 +49,7 @@ class CustomCarousel extends React.Component {
                     }}
                 >
                     {items.map(item => (
-                        <div key={item.id} className="carousel-section">
-                            <Link to={item.slug}><h2>{item.title}</h2></Link>
-                            <h3>{item.subtitle}</h3>
-                        </div>
+                        <ArticleCard article={item}></ArticleCard>
                     ))}
                 </Carousel>
             </div >
