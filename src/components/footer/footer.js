@@ -48,8 +48,8 @@ const Footer = () => {
     }
     return (
         <div className="footer-nav-container">
-            {navBarItems.map(navBarItem => (
-                <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
+            {navBarItems.map((navBarItem, index) => (
+                <Link className={navBarItem.className} key={`${navBarItem.slug}-index`} to={navBarItem.slug}>
                     {navBarItemRender(navBarItem)}
                 </Link>
             ))}

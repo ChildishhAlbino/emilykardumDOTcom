@@ -31,7 +31,7 @@ function SEO({ description, lang, meta, title }) {
       }
     `
     )
-    let seoIconURL = `https:${seoIcon.file.url}`
+    let seoIconURL = `http:${seoIcon.file.url}`
     const metaDescription = description || site.siteMetadata.description
     return (
         <Helmet
