@@ -18,10 +18,20 @@ class CustomCarousel extends React.Component {
                 { title && <h1>{title}</h1>}
                 { carousel !== undefined && (
                     <div className="carousel-nav-bar">
-                        <div onClick={() => { carousel.slidePrev() }}>
+                        <div
+                            onClick={() => { carousel.slidePrev() }}
+                            onKeyDown={() => { carousel.slidePrev() }}
+                            role="button"
+                            tabIndex={0}
+                        >
                             <FaArrowLeft />
                         </div>
-                        <div onClick={() => { carousel.slideNext() }}>
+                        <div
+                            onClick={() => { carousel.slideNext() }}
+                            onKeyDown={() => { carousel.slideNext() }}
+                            role="button"
+                            tabIndex={0}
+                        >
                             <FaArrowRight />
                         </div>
                     </div>
