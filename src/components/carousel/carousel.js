@@ -20,7 +20,11 @@ class CustomCarousel extends React.Component {
                     <div className="carousel-nav-bar">
                         <div
                             onClick={() => { carousel.slidePrev() }}
-                            onKeyDown={() => { carousel.slidePrev() }}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    carousel.slidePrev()
+                                }
+                            }}
                             role="button"
                             tabIndex={0}
                         >
@@ -28,14 +32,19 @@ class CustomCarousel extends React.Component {
                         </div>
                         <div
                             onClick={() => { carousel.slideNext() }}
-                            onKeyDown={() => { carousel.slideNext() }}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    carousel.slideNext()
+                                }
+                            }}
                             role="button"
                             tabIndex={0}
                         >
                             <FaArrowRight />
                         </div>
                     </div>
-                )}
+                )
+                }
             </div>
         )
     }
