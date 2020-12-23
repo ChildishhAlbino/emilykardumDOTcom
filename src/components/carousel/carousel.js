@@ -49,7 +49,7 @@ class CustomCarousel extends React.Component {
                     }}
                 >
                     {items.map(item => (
-                        <ArticleCard article={item}></ArticleCard>
+                        <ArticleCard key={item.id} article={item}></ArticleCard>
                     ))}
                 </Carousel>
             </div >

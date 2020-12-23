@@ -49,7 +49,7 @@ const Footer = () => {
     return (
         <div className="footer-nav-container">
             {navBarItems.map((navBarItem, index) => (
-                <Link className={navBarItem.className} key={`${navBarItem.slug}-index`} to={navBarItem.slug}>
+                <Link className={navBarItem.className} key={`${navBarItem.slug}-${index}`} to={navBarItem.slug}>
                     {navBarItemRender(navBarItem)}
                 </Link>
             ))}

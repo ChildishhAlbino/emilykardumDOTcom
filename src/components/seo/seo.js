@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, imageUrl }) {
     const { site, seoIcon } = useStaticQuery(
         graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
         seoIcon: contentfulAsset(title: {eq: "SEO_ICON"}) {
@@ -31,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
       }
     `
     )
-    let seoIconURL = `http:${seoIcon.file.url}`
+    let seoIconURL = imageUrl ? imageUrl : `http:${seoIcon.file.url}`
     const metaDescription = description || site.siteMetadata.description
     return (
         <Helmet
@@ -58,6 +59,10 @@ function SEO({ description, lang, meta, title }) {
                     content: `website`,
                 },
                 {
+                    property: `og:url`,
+                    content: site.siteMetadata.siteUrl,
+                },
+                {
                     property: `og:image`,
                     content: seoIconURL
                 },
@@ -81,6 +86,10 @@ function SEO({ description, lang, meta, title }) {
                     property: `twitter:image`,
                     content: seoIconURL
                 },
+                {
+                    property: `author`,
+                    content: site.siteMetadata.author
+                },
             ].concat(meta)}
         />
     )
@@ -90,6 +99,7 @@ SEO.defaultProps = {
     lang: `en`,
     meta: [],
     description: ``,
+    imgUrl: null
 }
 
 SEO.propTypes = {
@@ -97,6 +107,7 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string
 }
 
 export default SEO
