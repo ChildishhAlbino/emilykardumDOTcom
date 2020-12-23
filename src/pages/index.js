@@ -53,6 +53,11 @@ export const pageQuery = graphql`
         publicationDate
         title
         subtitle
+        thumbnail {
+          fluid(maxWidth: 2048) {
+            ...GatsbyContentfulFluid
+          }
+        }
       }
     }
   }
@@ -65,6 +70,11 @@ export const pageQuery = graphql`
         publicationDate
         title
         subtitle
+        thumbnail {
+          fluid (maxHeight: 360, quality: 100) {
+            ...GatsbyContentfulFluid
+          }
+        }
       }
     }
   }
