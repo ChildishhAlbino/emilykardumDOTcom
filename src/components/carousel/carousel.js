@@ -32,7 +32,7 @@ class CustomCarousel extends React.Component {
 
     render() {
         let { items, breakPoints, renderNavBar } = this.state
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <div className="carousel-container">
                 {renderNavBar && this.renderNavBar()}

@@ -12,7 +12,6 @@ class IndexPage extends React.Component {
     let gamingArticles = gaming.edges.map((node) => { return { ...node.node } })
     let politicsArticles = politics.edges.map((node) => { return { ...node.node } })
 
-    console.log(this.state)
     return (
       <Layout>
         <SEO title="Home"></SEO>

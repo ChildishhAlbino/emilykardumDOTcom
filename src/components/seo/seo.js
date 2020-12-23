@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-    const { site } = useStaticQuery(
+    const { site, seoIcon } = useStaticQuery(
         graphql`
       query {
         site {
@@ -21,10 +21,17 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
+        seoIcon: contentfulAsset(title: {eq: "SEO_ICON"}) {
+            contentful_id
+            file {
+            url
+            fileName
+            }
+        }
       }
     `
     )
-
+    console.log("SEO ICON", seoIcon)
     const metaDescription = description || site.siteMetadata.description
     return (
         <Helmet
@@ -51,6 +58,10 @@ function SEO({ description, lang, meta, title }) {
                     content: `website`,
                 },
                 {
+                    name: `og:image`,
+                    content: seoIcon.file.url
+                },
+                {
                     name: `twitter:card`,
                     content: `summary`,
                 },
@@ -65,6 +76,10 @@ function SEO({ description, lang, meta, title }) {
                 {
                     name: `twitter:description`,
                     content: metaDescription,
+                },
+                {
+                    name: `twitter:image`,
+                    content: seoIcon.file.url
                 },
             ].concat(meta)}
         />

@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
     posts.forEach((post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node
         const next = index === 0 ? null : posts[index - 1].node
-        console.log(post.slug)
+        // console.log(post.slug)
         createPage({
             path: post.node.slug,
             component: articleTemplate,

@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 
 
 const ArticleCard = ({ article }) => {
-    console.log(article.thumbnail)
     return (
         <div key={article.id} className="carousel-section">
             <div className={`article-card-wrapper landscape-article`}>

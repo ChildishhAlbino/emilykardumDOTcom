@@ -19,7 +19,6 @@ class Article extends React.Component {
         content: tags
       }
     ]
-    console.log(keywords)
     return (
       <Layout>
         <SEO
