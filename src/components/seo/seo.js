@@ -31,7 +31,7 @@ function SEO({ description, lang, meta, title }) {
       }
     `
     )
-    console.log("SEO ICON", seoIcon)
+    let seoIconURL = `https:${seoIcon.file.url}`
     const metaDescription = description || site.siteMetadata.description
     return (
         <Helmet
@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `og:image`,
-                    content: seoIcon.file.url
+                    content: seoIconURL
                 },
                 {
                     name: `twitter:card`,
@@ -79,7 +79,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `twitter:image`,
-                    content: seoIcon.file.url
+                    content: seoIconURL
                 },
             ].concat(meta)}
         />
