@@ -9,10 +9,10 @@ import { DateTime } from "luxon";
 class Article extends React.Component {
   render() {
     let { contentfulArticle } = this.props.data
-    let { title, subtitle, publicationDate, body, seo: { tags }, thumbnail } = contentfulArticle
+    let { title, subtitle, publicationDate, body, seo: { tags }, postThumbnail, seoThumbnail } = contentfulArticle
     let { raw } = body
     let parsed = JSON.parse(raw)
-    let imageUrl = thumbnail ? `http:${thumbnail.fluid.src}` : null
+    let seoImageUrl = seoThumbnail ? `http:${seoThumbnail.fluid.src}` : null
     let joinedTags = tags.join(', ')
     let keywords = [
       {
@@ -27,7 +27,7 @@ class Article extends React.Component {
           title={title}
           description={subtitle}
           meta={keywords}
-          imageUrl={imageUrl}
+          imageUrl={seoImageUrl}
         >
         </SEO>
         <main>
@@ -66,8 +66,13 @@ export const pageQuery = graphql`
       seo{
         tags
       }
-      thumbnail {
+      postThumbnail: thumbnail {
           fluid (maxWidth: 2048) {
+            ...GatsbyContentfulFluid
+          }
+        }
+      seoThumbnail: thumbnail {
+          fluid (maxWidth: 500) {
             ...GatsbyContentfulFluid
           }
         }

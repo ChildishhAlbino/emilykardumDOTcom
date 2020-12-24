@@ -23,7 +23,7 @@ module.exports = {
     title: `Emily Kardum`,
     author: `Emily Kardum`,
     description: `Gaming and Politics Journalism by Emily Kardum.`,
-    siteUrl: `https://emily-kardum.netlify.app/`,
+    siteUrl: `https://emily-kardum.netlify.app`,
     social: {
       twitter: `friedeggily`,
     }

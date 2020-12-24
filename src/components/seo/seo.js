@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, imageUrl }) {
+function SEO({ description, lang, meta, title, imageUrl, path }) {
     const { site, seoIcon } = useStaticQuery(
         graphql`
       query {
@@ -24,15 +24,15 @@ function SEO({ description, lang, meta, title, imageUrl }) {
         }
         seoIcon: contentfulAsset(title: {eq: "SEO_ICON"}) {
             contentful_id
-            file {
-            url
-            fileName
+            fluid(maxWidth: 500) {
+                src
             }
         }
       }
     `
     )
-    let seoIconURL = imageUrl ? imageUrl : `http:${seoIcon.file.url}`
+    let pageUrl = site.siteMetadata.siteUrl + path
+    let seoIconURL = imageUrl ? imageUrl : `http:${seoIcon.fluid.src}`
     const metaDescription = description || site.siteMetadata.description
     return (
         <Helmet
@@ -60,7 +60,7 @@ function SEO({ description, lang, meta, title, imageUrl }) {
                 },
                 {
                     property: `og:url`,
-                    content: site.siteMetadata.siteUrl,
+                    content: pageUrl,
                 },
                 {
                     property: `og:image`,
@@ -99,7 +99,8 @@ SEO.defaultProps = {
     lang: `en`,
     meta: [],
     description: ``,
-    imgUrl: null
+    imgUrl: null,
+    path: "",
 }
 
 SEO.propTypes = {
@@ -107,7 +108,8 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string
+    imageUrl: PropTypes.string,
+    path: PropTypes.string
 }
 
 export default SEO
