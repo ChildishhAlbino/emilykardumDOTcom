@@ -17,7 +17,7 @@ const ArticleCard = ({ article }) => {
                 {article.thumbnail !== null && (
                     <div className={`article-image-container`}>
                         <div
-                            style={{ "background-image": `url(${article.thumbnail.fluid.src})` }}
+                            style={{ "backgroundImage": `url(${article.thumbnail.fluid.src})` }}
                             className="article-image-blur"
                         />
                         <div className="article-image landscape-article">

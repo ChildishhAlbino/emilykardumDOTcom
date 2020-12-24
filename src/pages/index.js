@@ -43,7 +43,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 {
-    politics: allContentfulArticle(filter: {category: {eq: "politics/current-affairs"}}) {
+  politics: allContentfulArticle(filter: {category: {eq: "politics/current-affairs"}}) {
     edges {
       node {
         id
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         title
         subtitle
         thumbnail {
-          fluid(maxWidth: 2048) {
+          fluid(maxHeight: 315) {
             ...GatsbyContentfulFluid
           }
         }
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         title
         subtitle
         thumbnail {
-          fluid (maxHeight: 360, quality: 100) {
+          fluid (maxHeight: 315) {
             ...GatsbyContentfulFluid
           }
         }

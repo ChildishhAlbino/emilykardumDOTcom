@@ -9,14 +9,15 @@ import { Link, graphql } from "gatsby"
 class Article extends React.Component {
   render() {
     let { contentfulArticle } = this.props.data
-    let { title, subtitle, publicationDate, body, seo: { tags } } = contentfulArticle
+    let { title, subtitle, publicationDate, body, seo: { tags }, thumbnail } = contentfulArticle
     let { raw } = body
     let parsed = JSON.parse(raw)
-
+    let imageUrl = thumbnail ? `http:${thumbnail.fluid.src}` : null
+    let joinedTags = tags.join(', ')
     let keywords = [
       {
         name: `keywords`,
-        content: tags
+        content: joinedTags,
       }
     ]
     return (
@@ -25,6 +26,7 @@ class Article extends React.Component {
           title={title}
           description={subtitle}
           meta={keywords}
+          imageUrl={imageUrl}
         >
         </SEO>
         <main>
@@ -63,6 +65,11 @@ export const pageQuery = graphql`
       seo{
         tags
       }
+      thumbnail {
+          fluid (maxWidth: 2048) {
+            ...GatsbyContentfulFluid
+          }
+        }
     }
   }
 `
