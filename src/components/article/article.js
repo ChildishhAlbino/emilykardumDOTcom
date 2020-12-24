@@ -4,7 +4,7 @@ import Layout from '../layout/layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import SEO from '../seo/seo'
 import { Link, graphql } from "gatsby"
-
+import { DateTime } from "luxon";
 
 class Article extends React.Component {
   render() {
@@ -20,6 +20,7 @@ class Article extends React.Component {
         content: joinedTags,
       }
     ]
+    let formattedDate = DateTime.fromISO(publicationDate).setZone("local").toFormat("FFFF")
     return (
       <Layout>
         <SEO
@@ -33,7 +34,7 @@ class Article extends React.Component {
           <article>
             <h1>{title}</h1>
             <h2>{subtitle}</h2>
-            <i>{Date(publicationDate)}</i>
+            <i>{formattedDate}</i>
             <hr></hr>
             <section>{documentToReactComponents(parsed)}</section>
           </article>
