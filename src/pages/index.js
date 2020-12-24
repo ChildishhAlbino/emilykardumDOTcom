@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         title
         subtitle
         thumbnail {
-          fluid(maxHeight: 315) {
+          fluid(maxHeight: 315, toFormat: WEBP) {
             ...GatsbyContentfulFluid
           }
         }
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         title
         subtitle
         thumbnail {
-          fluid (maxHeight: 315) {
+          fluid (maxHeight: 315, toFormat: WEBP) {
             ...GatsbyContentfulFluid
           }
         }
