@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
-section {
-  border: 2px solid #000;
-  padding: 1em;
-}
-
 * {
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
@@ -35,15 +30,16 @@ body {
 main {
   padding: 1em;
   min-height: 88vh;
-  background-color: #f1f1f1;
 }
 
 html {
   height: 100%;
   margin: 0;
   min-width: 320px;
+  background-color: #f1f1f1;
 }
 
 :root {
   --carousel-item-height: 450px;
+  --bio-item-width: 300px;
 }

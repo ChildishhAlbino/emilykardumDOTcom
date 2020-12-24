@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import SEO from '../components/seo/seo'
 import { graphql } from "gatsby"
 import Carousel from "../components/carousel/carousel"
+import Bio from "../components/bio/bio"
 class IndexPage extends React.Component {
   state = { ...this.props }
   render() {
@@ -16,12 +17,8 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home"></SEO>
         <main>
-          <h1>Hi! I'm Emily.</h1>
-          <section>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto saepe corrupti fuga! Quae ducimus dolore voluptate soluta expedita sequi fugit? Delectus aperiam libero magni perferendis cumque consectetur dicta facilis magnam incidunt, architecto earum neque aut nam eum quisquam debitis laboriosam ab rerum laudantium ut! Repellendus maiores quibusdam nobis sed doloremque!
-            </p>
-          </section>
+          <Bio />
+          <hr></hr>
           <Carousel
             items={gamingArticles}
             renderNavBar={true}
