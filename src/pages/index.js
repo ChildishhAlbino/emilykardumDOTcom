@@ -27,6 +27,7 @@ class IndexPage extends React.Component {
             renderNavBar={true}
             title={"Gaming, Technology, and Entertainment"}
           />
+          <hr />
           <Carousel
             items={politicsArticles}
             renderNavBar={true}
