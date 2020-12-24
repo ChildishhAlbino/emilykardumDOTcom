@@ -17,7 +17,19 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-advanced-sitemap`
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `emilykardum.com`,
+        short_name: `ek.com`,
+        start_url: `/`,
+        background_color: `#f1f1f1`,
+        theme_color: `#1b1b1b`,
+        display: `standalone`,
+        icon: `static/icon.png`
+      },
+    },
   ],
   siteMetadata: {
     title: `Emily Kardum`,
