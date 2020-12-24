@@ -43,7 +43,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 {
-  politics: allContentfulArticle(filter: {category: {eq: "politics/current-affairs"}}) {
+  politics: allContentfulArticle(filter: {category: {eq: "politics/current-affairs"}}, sort: {fields: publicationDate, order: ASC}, limit: 12) {
     edges {
       node {
         id
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
       }
     }
   }
-  gaming: allContentfulArticle(filter: {category: {eq: "gaming/technology/entertainment"}}) {
+  gaming: allContentfulArticle(filter: {category: {eq: "gaming/technology/entertainment"}}, sort: {fields: publicationDate, order: ASC}, limit: 12) {
     edges {
       node {
         id
