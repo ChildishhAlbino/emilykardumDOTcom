@@ -28,6 +28,7 @@ class Article extends React.Component {
           description={subtitle}
           meta={keywords}
           imageUrl={seoImageUrl}
+          path={this.props.path}
         >
         </SEO>
         <main>
