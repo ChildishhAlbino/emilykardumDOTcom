@@ -5,9 +5,9 @@ import './article-card.scss';
 import Img from "gatsby-image"
 
 
-const ArticleCard = ({ article }) => {
+const ArticleCard = ({ className, article }) => {
     return (
-        <div key={article.id} className="carousel-section">
+        <div key={article.id} className={"article-card-container " + className}>
             <div className={`article-card-wrapper landscape-article`}>
                 <div className="article-header">
                     <Link to={article.slug}><h2>{article.title}</h2></Link>

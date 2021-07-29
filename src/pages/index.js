@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from '../components/seo/seo'
 import { graphql } from "gatsby"
-import Carousel from "../components/carousel/carousel"
+import ArticleBar from "../components/article-bar/article-bar"
 import Bio from "../components/bio/bio"
 class IndexPage extends React.Component {
   state = { ...this.props }
@@ -19,17 +19,15 @@ class IndexPage extends React.Component {
         <main>
           <Bio />
           <hr></hr>
-          <Carousel
-            items={gamingArticles}
-            renderNavBar={true}
-            title={"Gaming, Technology, and Entertainment"}
-          />
+          <h3>
+            Gaming, Technology, and Entertainment
+          </h3>
+          <ArticleBar articles={gamingArticles}></ArticleBar>
           <hr />
-          <Carousel
-            items={politicsArticles}
-            renderNavBar={true}
-            title={"Politics & Current Affairs"}
-          />
+          <h3>
+            Politics & Current Affairs
+          </h3>
+          <ArticleBar articles={politicsArticles}></ArticleBar>
         </main>
       </Layout >
     )
