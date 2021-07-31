@@ -43,7 +43,7 @@ class Article extends React.Component {
             <i>{formattedDate}</i>
             <hr></hr>
             <section><div className="article-text-box">
-              <MdxContent content={content.childMdx} />
+              <MdxContent content={content.childMdx} /><br></br><br></br>
             <Link to="/">Back to Home Page</Link></div></section>
           </article>
         </main></div>
