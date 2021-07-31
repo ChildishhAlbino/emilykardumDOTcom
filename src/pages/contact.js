@@ -9,7 +9,6 @@ class ContactPage extends React.Component {
       <Layout>
         <SEO title="Contact Me!"></SEO>
         <main>
-          <br></br><br></br><br></br>
           <h1>Contact Me</h1>
           <div className="contact-container">
           <div className="contact">

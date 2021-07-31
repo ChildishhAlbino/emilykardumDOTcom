@@ -73,6 +73,7 @@ h1 {
 	line-height: 1.1;
 	margin-bottom: 0.2em;
 	color: #151515;
+  margin-top: 1em;
 	
 }
 h2 {
@@ -203,4 +204,11 @@ p .text-center {
 .footer-text {
   color: #d3d3d3;
   padding: 2em 10em 2em 10em;
+}
+.article-box {
+  padding: 1em 10em 1em 10em;
+}
+.article-text-box {
+  width: 60%;
+  margin: 2em auto 3em auto;
 }

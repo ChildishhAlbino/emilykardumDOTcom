@@ -9,7 +9,6 @@ class PortfolioPage extends React.Component {
       <Layout>
         <SEO title="Portfolio!"></SEO>
         <main>
-        <br></br><br></br><br></br>
           <h1>Portfolio of Work</h1>
         </main>
       </Layout >

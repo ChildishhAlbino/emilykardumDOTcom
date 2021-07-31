@@ -35,18 +35,19 @@ class Article extends React.Component {
           path={this.props.path}
         >
         </SEO>
+        <div className="article-box">
         <main>
           <article>
             <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+            <h3>{subtitle}</h3>
             <i>{formattedDate}</i>
             <hr></hr>
-            <section>
+            <section><div className="article-text-box">
               <MdxContent content={content.childMdx} />
-            </section>
+            <Link to="/">Back to Home Page</Link></div></section>
           </article>
-        </main>
-        <Link to="/">Back to Home Page</Link>
+        </main></div>
+        
       </Layout >
     )
   }
