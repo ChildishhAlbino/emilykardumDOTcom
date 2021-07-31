@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 const DesktopNavBar = ({ items }) => {
     let navBarItemRender = (navBarItem) => {
         if (navBarItem.collapsible) {
-            return <h1>{navBarItem.title}</h1>
+            return <h4>{navBarItem.title}</h4>
         } else {
             return <FaHome></FaHome>
         }
@@ -18,6 +18,7 @@ const DesktopNavBar = ({ items }) => {
                     <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
                         {navBarItemRender(navBarItem)}
                     </Link>
+                    /** hi connor how tf do I edit the different menu items and their styling? and the logo */
                 ))}
             </div>
         </div>

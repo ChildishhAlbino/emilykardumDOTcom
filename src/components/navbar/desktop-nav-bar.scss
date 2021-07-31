@@ -1,15 +1,13 @@
 .desktop-nav-container {
   .navbar-item {
-    background-color: black;
-    padding: 0.1em;
-    border-radius: 0.25em;
+   
   }
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   * {
     font-size: 1em;
     margin: 0;
-    padding: 0;
+    padding: 0 1em 0 1em;
   }
   .logo {
     font-size: 3em;
@@ -17,36 +15,10 @@
   justify-items: center;
   align-items: center;
   min-height: 125px;
+  margin: 0 30em 0 30em;
 }
 .navi-container {
 	background-color: #2A2A2A;
 	padding: 1em 3em 1em 3em;
 	margin: 0;
 }
-  h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    color: #e7e7e7;
-    display: inline-block;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    margin: 0.5em 1em 0.5em 1em;
-    border-top: 2px solid #4F4F4F;
-    border-left: 2px solid #4F4F4F;
-    border-bottom: 2px solid #1B1B1B;
-    border-right: 2px solid #1b1b1b;
-    background-color: #353535;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 800;
-    
-  
-  }
-  h4:hover{
-    border-top: 2px solid #5d5d5d;
-    border-left: 2px solid #5d5d5d;
-    border-bottom: 2px solid #212121;
-    border-right: 2px solid #212121;
-    background-color: #3e3e3e;
-    transition-duration: 1s;
-  }

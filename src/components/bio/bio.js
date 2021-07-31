@@ -21,7 +21,8 @@ const Bio = () => {
         
             
             <div className="header-container">
-	            <h1>Emily Kardum</h1>
+	            <center><img src="https://i.imgur.com/OU15Maf.png" height="130em" padding="3em"></img></center>
+                <h1>Emily Kardum</h1>
 	            <h3><span>journalist | media producer | social media marketer</span></h3>
 	           
                 </div>
@@ -31,3 +32,7 @@ const Bio = () => {
 }
 
 export default Bio
+
+
+
+   

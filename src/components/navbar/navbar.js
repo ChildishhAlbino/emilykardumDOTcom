@@ -6,17 +6,12 @@ import './navbar.scss'
 const NavBar = () => {
 
     let navBarItems = [
-        {
-            title: "About", slug: "/about", className: "navbar-item", collapsible: true,
-        },
+       
         {
             title: "Portfolio", slug: "/portfolio", className: "navbar-item", collapsible: true,
         },
         {
             title: "Home", slug: "/", className: "navbar-item logo", collapsible: false,
-        },
-        {
-            title: "Placeholder", slug: "/placeholder", className: "navbar-item", collapsible: true,
         },
         {
             title: "Contact", slug: "/contact", className: "navbar-item", collapsible: true,
