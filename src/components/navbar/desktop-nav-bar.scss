@@ -1,20 +1,15 @@
 .desktop-nav-container {
   .navbar-item {
-    // background-color: black;
-    padding: 0.1em;
-    border-radius: 0.25em;
-  }
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  * {
-    font-size: 1em;
+    font-size: 9px;
+    max-height: var(--logo-size);
     margin: 0;
     padding: 0;
   }
-  .logo {
-    font-size: 1em;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   justify-items: center;
   align-items: center;
-  min-height: 125px;
+  height: 100%;
+  max-height: var(--logo-size);
 }

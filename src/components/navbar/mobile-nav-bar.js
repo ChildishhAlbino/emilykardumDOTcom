@@ -11,17 +11,13 @@ const MobileNavBar = ({ items }) => {
                 <input type="checkbox" id="mobile-nav-toggle"></input>
                 {items.filter(it => it.collapsible === false).map(navBarItem => (
                     <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
-                        <div>
-                            <Logo />
-                        </div>
+                        <Logo />
                     </Link>
                 ))}
                 <div className="collapsible">
                     {items.filter(it => it.collapsible === true).map(navBarItem => (
                         <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
-                            <div>
-                                <h1>{navBarItem.title}</h1>
-                            </div>
+                            <h1>{navBarItem.title}</h1>
                         </Link>
                     ))}
                 </div>
