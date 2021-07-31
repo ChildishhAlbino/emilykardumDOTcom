@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "push": "git add . ; git commit -m 'updates from nicole' ; git push"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.2",
