@@ -81,9 +81,13 @@ h2 {
 	background-color: #E3C8FF;
 	line-height: 70%!important;
 	text-transform: lowercase;
-	margin-bottom: 1rem;
 	font-weight: 800!important;
-	margin-top: 0.6em;
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 	
 }
 h3 {
@@ -153,4 +157,27 @@ p .text-center {
 	margin: 0 auto 0 auto;
 	
 	
+}
+.about {
+  width: 80%;
+  padding: 1em 10% 1em 10%;
+  margin: 5em auto 5em auto;
+  text-align: center;
+}
+.contact {
+  width: 50%;
+  float: left;
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5;
+
+}
+.contact-container {
+  width: 80%;
+  position: absolute;
+  align: center;
+  margin: 1em auto 1em auto;
+  padding: 1em;
+  background-color: red;
+
 }
