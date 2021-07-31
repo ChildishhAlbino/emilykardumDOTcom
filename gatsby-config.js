@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#f1f1f1`,
         theme_color: `#1b1b1b`,
         display: `standalone`,
-        icon: `static/icon.png`
+        icon: `static/emily.svg`
       },
     },
   ],

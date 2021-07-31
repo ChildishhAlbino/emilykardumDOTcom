@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../layout/layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -9,7 +8,8 @@ import { DateTime } from "luxon";
 class Article extends React.Component {
   render() {
     let { contentfulArticle } = this.props.data
-    let { title, subtitle, publicationDate, body, seo: { tags }, postThumbnail, seoThumbnail } = contentfulArticle
+    let { title, subtitle, publicationDate, body, seo, postThumbnail, seoThumbnail } = contentfulArticle
+    let tags = seo.tags ? seo.tags : []
     let { raw } = body
     let parsed = JSON.parse(raw)
     let seoImageUrl = seoThumbnail ? `http:${seoThumbnail.fluid.src}` : null

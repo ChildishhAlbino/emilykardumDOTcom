@@ -1,0 +1,38 @@
+.article-bar-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  column-gap: 1em;
+}
+@media (min-width: 1024px) {
+  .article-bar-desktop {
+    display: default;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .article-bar-small-desktop {
+    display: default;
+  }
+  .article-bar-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .article-bar-small-desktop {
+    display: none;
+  }
+  .article-bar-desktop {
+    display: none;
+  }
+}
+
+.article-bar-all {
+  display: default;
+}
+
+.article-bar-mobile {
+  display: default;
+}
