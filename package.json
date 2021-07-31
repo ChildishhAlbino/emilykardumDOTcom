@@ -27,6 +27,8 @@
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sass": "^2.8.0",
     "gatsby-plugin-styled-components": "^3.7.0",
+    "gatsby-remark-images-contentful": "^4.7.0",
+    "gatsby-remark-unwrap-images": "^1.0.2",
     "gatsby-source-contentful": "^4.3.0",
     "luxon": "^1.25.0",
     "node-sass": "^4.14.1",
@@ -35,6 +37,7 @@
     "react-elastic-carousel": "^0.10.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
+    "react-svg": "^14.0.6",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './desktop-nav-bar.scss'
-import { FaHome } from "react-icons/fa";
+import Logo from "../icons/logo";
+
 
 const DesktopNavBar = ({ items }) => {
     let navBarItemRender = (navBarItem) => {
         if (navBarItem.collapsible) {
             return <h4>{navBarItem.title}</h4>
         } else {
-            return <FaHome></FaHome>
+            return <Logo />
         }
     }
     return (
