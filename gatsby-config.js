@@ -23,15 +23,16 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           "gatsby-remark-unwrap-images",
-          {
-            resolve: `gatsby-remark-images-contentful`,
-            options: {
-              maxWidth: 590,
-              linkImagesToOriginal: false,
-              showCaptions: true,
-              withWebp: true
-            },
-          }
+          // commented out until dependency updates
+          // {
+          //   resolve: `gatsby-remark-images-contentful`,
+          //   options: {
+          //     maxWidth: 590,
+          //     linkImagesToOriginal: false,
+          //     showCaptions: true,
+          //     withWebp: true
+          //   },
+          // }
         ],
       },
     },
