@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 import Carousel from 'react-elastic-carousel'
 import ArticleCard from '../article-card/article-card';
@@ -10,6 +13,7 @@ class CustomCarousel extends React.Component {
     componentDidMount() {
         this.setState({ ...this.props });
     }
+
 
     renderNavBar = () => {
         let { carousel, title } = this.state
