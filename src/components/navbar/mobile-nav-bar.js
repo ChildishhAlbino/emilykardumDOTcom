@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import './mobile-nav-bar.scss'
 import { FaEllipsisH, FaHome } from "react-icons/fa";
+import Logo from "../icons/logo";
 
 const MobileNavBar = ({ items }) => {
     return (
@@ -11,7 +12,7 @@ const MobileNavBar = ({ items }) => {
                 {items.filter(it => it.collapsible === false).map(navBarItem => (
                     <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
                         <div>
-                            <FaHome></FaHome>
+                            <Logo />
                         </div>
                     </Link>
                 ))}

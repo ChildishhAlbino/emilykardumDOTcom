@@ -12,7 +12,7 @@ class MdxContent extends React.Component {
         return (
             <>
                 {!!content && <MDXProvider components={{}} >
-                    <MDXRenderer>{content.body}</MDXRenderer>
+                    <MDXRenderer className="mdx-content">{content.body}</MDXRenderer>
                 </MDXProvider>}
             </>
         )

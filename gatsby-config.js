@@ -18,7 +18,23 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-unwrap-images",
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              withWebp: true
+            },
+          }
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
