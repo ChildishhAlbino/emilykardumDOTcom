@@ -1,0 +1,28 @@
+article {
+  display: grid;
+  width: 100%;
+  grid-template-rows: minmax(1fr, 200px) 1fr;
+  justify-content: center;
+  justify-items: center;
+  .article-content {
+    max-width: 100ch;
+  }
+  img {
+    max-width: 320px;
+  }
+}
+
+.article-container {
+  padding: 1em;
+  h1 {
+    max-width: 45ch;
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    img {
+      max-width: 768px;
+    }
+  }
+}

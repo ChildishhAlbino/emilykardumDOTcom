@@ -4,6 +4,7 @@ import SEO from '../seo/seo'
 import { Link, graphql } from "gatsby"
 import { DateTime } from "luxon";
 import MdxContent from '../mdx-content/mdx-content';
+import './article.scss'
 
 class Article extends React.Component {
 
@@ -35,19 +36,21 @@ class Article extends React.Component {
           path={this.props.path}
         >
         </SEO>
-        <div className="article-box">
-        <main>
+        <main className="article-container">
           <article>
-            <h1>{title}</h1>
-            <h3>{subtitle}</h3>
-            <i>{formattedDate}</i>
-            <hr></hr>
-            <section><div className="article-text-box">
-              <MdxContent content={content.childMdx} /><br></br><br></br>
-            <Link to="/">Back to Home Page</Link></div></section>
+            <div>
+              <h1>{title}</h1>
+              <h3>{subtitle}</h3>
+              <i>{formattedDate}</i>
+              <hr></hr>
+            </div>
+            <section className="article-content">
+              <MdxContent content={content.childMdx} />
+            </section>
+            <Link to="/">Back to Home Page</Link>
           </article>
-        </main></div>
-        
+        </main>
+
       </Layout >
     )
   }
