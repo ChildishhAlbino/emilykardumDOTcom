@@ -99,33 +99,22 @@ h3 span {
     background-color: rgba(221,210,241,0.8);
 	padding: 0 1em 0 1em;
 	}
-h4 {
-	font-family: 'Poppins', sans-serif;
-	font-size: 1.1em;
-	color: #e7e7e7;
-	display: inline-block;
-	padding: 0.5em 1.5em 0.5em 1.5em;
-	margin: 0.5em 1em 0.5em 1em;
-	border-top: 2px solid #4F4F4F;
-	border-left: 2px solid #4F4F4F;
-	border-bottom: 2px solid #1B1B1B;
-	border-right: 2px solid #1b1b1b;
-	background-color: #353535;
-	border-radius: 5px;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	font-weight: 800;
-	
-
-}
-h4:hover{
-	border-top: 2px solid #5d5d5d;
-	border-left: 2px solid #5d5d5d;
-	border-bottom: 2px solid #212121;
-	border-right: 2px solid #212121;
-	background-color: #3e3e3e;
-	transition-duration: 1s;
-}
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    color: #969696;
+    padding: 2em 3em 2em 3em;
+    margin: 0.5em 1em 0.5em 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    
+  
+  }
+  h4:hover{
+    color: #C9C9C9;
+    transition-duration: 1s;
+  }
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -146,14 +135,15 @@ p .text-center {
 
 }
 .header-container {
-	background-image: url(https://images.unsplash.com/photo-1616001089004-04948fc0e6c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80.jpg);
+	background-image: url(https://images.unsplash.com/photo-1588097237448-45f7aadebae1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
 	background-repeat: no-repeat;	
 	background-size: cover;
 	background-color: #e5e5e5; 
+  background-position: bottom;
 	display: block;
 	border: 0;
 	padding: 4em 3em 4em 3em;
-	align: center;
+	box-align: center;
 	margin: 0 0 2em 0;
 	}
 	

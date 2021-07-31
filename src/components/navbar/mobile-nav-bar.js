@@ -19,7 +19,7 @@ const MobileNavBar = ({ items }) => {
                     {items.filter(it => it.collapsible === true).map(navBarItem => (
                         <Link className={navBarItem.className} key={navBarItem.slug} to={navBarItem.slug}>
                             <div>
-                                <h1>{navBarItem.title}</h1>
+                                <h4>{navBarItem.title}</h4>
                             </div>
                         </Link>
                     ))}
