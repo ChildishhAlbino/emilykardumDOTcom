@@ -17,7 +17,7 @@ class ArticleBar extends React.Component {
                 {sliced.map((item, index) => {
                     console.log(index)
                     let className = ""
-                    if (index == 0) {
+                    if (index === 0) {
                         className = "article-bar-all"
                     }
                     else if (index < mobileMax) {
