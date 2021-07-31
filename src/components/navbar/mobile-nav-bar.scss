@@ -3,7 +3,7 @@
   transform: scale(1, 0);
   transform-origin: top;
   transition: none;
-  h1 {
+  h4 {
     opacity: 0;
     transition: none;
   }
@@ -13,9 +13,12 @@
   height: 100%;
   transform: scale(1, 1);
   transition: transform 400ms ease-in-out;
-  h1 {
+  h4 {
     opacity: 1;
     transition: opacity 200ms ease-in-out 200ms;
+    line-height: 100%;
+    padding: 1.5em;
+    margin:0;
   }
 }
 .mobile-nav-container {
@@ -26,12 +29,10 @@
 }
 
 .mobile-nav {
+  
   .navbar-item {
-    font-size: 1em;
     color: white;
     div {
-      background-color: black;
-      border-radius: 0.25em;
     }
     text-align: center;
   }
@@ -39,7 +40,8 @@
     text-decoration: none;
   }
   .logo {
-    font-size: 32px;
+    font-size: 10px;
+    max-height: 0.1em;
   }
 }
 
@@ -52,9 +54,4 @@
   margin: 0;
   padding: 0;
   color: white;
-}
-.navi-container {
-	background-color: #2A2A2A;
-	padding: 1em 3em 1em 3em;
-	margin: 0;
 }

@@ -95,13 +95,16 @@ h3 {
 	font-size: 1.1em;
 	font-weight: 400;
 	color: #4c4c4c;
-	line-height: 90%!important;
+	line-height: 100%!important;
+  
 	margin: 1em 0;
 	
 }
 h3 span {
     background-color: rgba(221,210,241,0.8);
 	padding: 0 1em 0 1em;
+  line-height: 150%;
+
 	}
   h4 {
     font-family: 'Poppins', sans-serif;
@@ -124,7 +127,7 @@ p {
   margin-bottom: 1rem;
 	font-family: Arial;
 	font-weight: 350;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	color: #151515;
 	line-height: 1.8;
 	
@@ -167,17 +170,37 @@ p .text-center {
 .contact {
   width: 50%;
   float: left;
-  padding: 1em;
+  padding: 2em;
+  text-align: left;
+
+}
+.contact2 {
+  width: 50%;
+  float: left;
+  padding: 2em;
   text-align: left;
   line-height: 1.5;
+  font-size: 12pt;
+  vertical-align: middle!important;
 
 }
 .contact-container {
-  width: 80%;
-  position: absolute;
-  align: center;
+  width: 70%;
+  align-content: center;
   margin: 1em auto 1em auto;
   padding: 1em;
-  background-color: red;
 
+}
+.stress {
+  font-weight:900;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+
+
+
+}
+.footer-text {
+  color: #d3d3d3;
+  padding: 2em 10em 2em 10em;
 }

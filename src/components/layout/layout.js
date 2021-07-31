@@ -13,7 +13,8 @@ const Layout = ({ children }) => {
                 {children}
             </div>
             <footer>
-                <Footer></Footer>
+                <div className="footer-text">© Emily Kardum 2021. All rights reserved.</div>
+                
             </footer>
         </div>
     )
