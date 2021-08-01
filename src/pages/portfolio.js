@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from '../components/seo/seo'
 import ArticleCard from "../components/article-card/article-card"
+import { graphql } from "gatsby"
 
 
 class PortfolioPage extends React.Component {

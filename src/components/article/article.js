@@ -69,7 +69,6 @@ export const pageQuery = graphql`
       category
       id
       publicationDate
-      subtitle
       title
       seo{
         tags
