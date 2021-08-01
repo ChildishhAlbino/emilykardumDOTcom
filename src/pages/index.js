@@ -19,15 +19,15 @@ class IndexPage extends React.Component {
         <main>
           <Bio />
 
-        <div className="about">
+          <div className="about">
 
-          <p>This is an about section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec molestie ante. Sed fringilla, nulla at pellentesque lacinia, sem ex aliquam massa, a varius enim dolor eget nisi. Mauris efficitur eros vitae lorem placerat imperdiet. Aliquam ultricies, tellus nec bibendum consectetur, metus ex rutrum ante, ac scelerisque ipsum ligula sed neque. Pellentesque sollicitudin lacinia diam a volutpat. Duis sollicitudin interdum laoreet. Fusce lobortis, magna in tempor facilisis, ligula nisl efficitur sem, ac commodo felis dolor vitae sapien.</p>
-        </div>
+            <p>This is an about section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec molestie ante. Sed fringilla, nulla at pellentesque lacinia, sem ex aliquam massa, a varius enim dolor eget nisi. Mauris efficitur eros vitae lorem placerat imperdiet. Aliquam ultricies, tellus nec bibendum consectetur, metus ex rutrum ante, ac scelerisque ipsum ligula sed neque. Pellentesque sollicitudin lacinia diam a volutpat. Duis sollicitudin interdum laoreet. Fusce lobortis, magna in tempor facilisis, ligula nisl efficitur sem, ac commodo felis dolor vitae sapien.</p>
+          </div>
           <h2>
             Gaming, Technology, and Entertainment
           </h2>
           <ArticleBar articles={gamingArticles}></ArticleBar>
-        
+
           <h2>
             Politics & Current Affairs
           </h2>
@@ -51,7 +51,6 @@ export const pageQuery = graphql`
         category
         publicationDate
         title
-        subtitle
         thumbnail {
           fluid(maxHeight: 315, toFormat: WEBP) {
             ...GatsbyContentfulFluid
@@ -68,7 +67,6 @@ export const pageQuery = graphql`
         category
         publicationDate
         title
-        subtitle
         thumbnail {
           fluid (maxHeight: 315, toFormat: WEBP) {
             ...GatsbyContentfulFluid

@@ -10,8 +10,8 @@ const ArticleCard = ({ className, article }) => {
         <div key={article.id} className={"article-card-container " + className}>
             <div className={`article-card-wrapper landscape-article`}>
                 <div className="article-header">
+
                     <Link to={article.slug}><h5>{article.title}</h5></Link>
-                    {/* <h6>{article.subtitle}</h6> */}
                 </div>
                 {article.thumbnail === null && (<div className="article-icon"><h1><FaBookOpen></FaBookOpen></h1></div>)}
                 {article.thumbnail !== null && (

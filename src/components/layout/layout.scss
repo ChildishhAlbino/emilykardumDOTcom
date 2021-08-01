@@ -37,6 +37,7 @@ main {
   padding: 0;
   min-height: 88vh;
   font-size: 14px;
+  min-width: 320px;
 }
 
 html {
@@ -122,6 +123,7 @@ h4:hover {
   color: #c9c9c9;
   transition-duration: 1s;
 }
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -131,14 +133,11 @@ p {
   color: #151515;
   line-height: 1.8;
 }
+
 p .text-center {
   text-align: center !important;
 }
-.navi-container {
-  background-color: #2a2a2a;
-  padding: 1em 3em 1em 3em;
-  margin: 0;
-}
+
 .header-container {
   background-image: url(https://images.unsplash.com/photo-1588097237448-45f7aadebae1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
   background-repeat: no-repeat;
@@ -200,17 +199,21 @@ p .text-center {
   grid-template-columns: 1fr;
   width: 100%;
   justify-items: center;
-  row-gap: 1em;
+  // row-gap: 1em;
+  column-gap: 1em;
+  padding: 0em 1em 0em;
 }
 
 @media (min-width: 768px) {
   .portfolio-page-container {
     grid-template-columns: 1fr 1fr;
+    padding: 0em 2em 0em;
   }
 }
 
 @media (min-width: 1024px) {
   .portfolio-page-container {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0em 5em 0em;
   }
 }

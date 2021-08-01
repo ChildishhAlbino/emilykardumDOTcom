@@ -23,7 +23,7 @@ class Article extends React.Component {
 
   render() {
     let { contentfulArticle } = this.props.data
-    let { title, subtitle, publicationDate, seo, postThumbnail, seoThumbnail, content } = contentfulArticle
+    let { title, subtitle, publicationDate, seo, seoThumbnail, content } = contentfulArticle
     const { keywords, seoImageUrl } = this.generateSeo(seo, seoThumbnail)
     let formattedDate = DateTime.fromISO(publicationDate).setZone("local").toFormat("FFFF")
     return (
@@ -38,12 +38,12 @@ class Article extends React.Component {
         </SEO>
         <main className="article-container">
           <article>
-            <div>
+            <span>
               <h1>{title}</h1>
               <h3>{subtitle}</h3>
               <i>{formattedDate}</i>
               <hr></hr>
-            </div>
+            </span>
             <section className="article-content">
               <MdxContent content={content.childMdx} />
             </section>

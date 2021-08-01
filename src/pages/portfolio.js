@@ -36,7 +36,6 @@ export const pageQuery = graphql`
         category
         publicationDate
         title
-        subtitle
         thumbnail {
           fluid(maxHeight: 315, toFormat: WEBP) {
             ...GatsbyContentfulFluid
