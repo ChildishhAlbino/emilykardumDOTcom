@@ -11,8 +11,8 @@ class PortfolioPage extends React.Component {
     return (
       <Layout>
         <SEO title="Portfolio!"></SEO>
+        <h1>Portfolio of Work</h1>
         <main className="portfolio-page-container">
-          <h1>Portfolio of Work</h1>
           {this.state.data.items.edges.map(({ node }) => {
             return (
               <ArticleCard article={node} />
