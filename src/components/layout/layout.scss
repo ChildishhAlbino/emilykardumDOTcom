@@ -44,3 +44,23 @@ html {
   --carousel-item-height: 450px;
   --bio-item-width: 300px;
 }
+
+.portfolio-page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-items: center;
+  row-gap: 1em;
+}
+
+@media (min-width: 768px) {
+  .portfolio-page-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-page-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
